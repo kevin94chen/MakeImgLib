@@ -44,7 +44,8 @@ def writeExcel(path):
     COL += 1
 
     # Insert an image and move to next row
-    WORKSHEET.insert_image(row=ROW, col=COL, filename=path, options={'x_scale': 0.2, 'y_scale': 0.2})
+    WORKSHEET.insert_image(row=ROW, col=COL, filename=path, options={'x_scale': 0.2, 'y_scale': 0.2,
+                                                                     'url': 'external:'+path, 'tip': path})
     ROW += 1
     COL -= 1
 
